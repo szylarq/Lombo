@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lombo.controllers.ContractWindowController">
+   <children>
+      <Label text="Nowa umowa">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" left="30.0" top="30.0" />
+         </VBox.margin>
+      </Label>
+      <GridPane prefHeight="180.0" prefWidth="566.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="30.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="30.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="*Typ umowy:" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label text="*Data od:" GridPane.columnIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <DatePicker fx:id="dateFromPicker" prefHeight="54.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="*Okres pożyczki:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="valueLabel" text="*Kwota pożyczki:" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="valueTextField" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ComboBox fx:id="typeComboBox" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="200.0" visibleRowCount="20" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="lengthComboBox" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" visibleRowCount="20" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="dateToField" maxWidth="-Infinity" prefHeight="47.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="interestValueField" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label text="Data do:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Kwota odsetek:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="30.0" prefWidth="30.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="355.0" minWidth="10.0" prefWidth="355.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="30.0" prefWidth="30.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="114.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="30.0" prefWidth="30.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="*Klient:" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label text="*Przedmiot:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <ComboBox fx:id="customerComboBox" prefHeight="98.0" prefWidth="397.0" visibleRowCount="20" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="productComboBox" prefHeight="42.0" prefWidth="379.0" visibleRowCount="20" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#onCreateNewCustomerClicked" prefHeight="73.0" prefWidth="143.0" text="Nowy klient" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#onCreateNewProductClicked" prefHeight="78.0" prefWidth="184.0" text="Nowy przedmiot" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </GridPane>
+      <VBox prefHeight="150.0" prefWidth="574.0">
+         <children>
+            <Label text="* pola wymagane oznaczone są gwiazdką">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="30.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <GridPane prefHeight="46.0" prefWidth="544.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="30.0" prefWidth="30.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="saveContractButton" mnemonicParsing="false" onAction="#onContractSaveButtonClicked" prefHeight="64.0" prefWidth="263.0" text="Zapisz umowę" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="printContractButton" mnemonicParsing="false" onMouseClicked="#onContractGenerateButtonClicked" prefHeight="79.0" prefWidth="283.0" text="Generuj umowę" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>
